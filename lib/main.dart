@@ -1,4 +1,5 @@
 import 'package:energy_monitoring_app/auth-pages/auth_page.dart';
+import 'package:energy_monitoring_app/auth-pages/signin.dart';
 import 'package:energy_monitoring_app/user-pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  bool user_logged = true;
+  bool user_logged = false;
 
   MyApp({super.key});
  
@@ -19,9 +20,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: user_logged ? HomePage() : AuthPage()
+      home: user_logged ? HomePage() : Signin()
     );
   }
 }
