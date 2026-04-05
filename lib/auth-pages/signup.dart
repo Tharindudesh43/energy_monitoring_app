@@ -76,7 +76,6 @@ class _SignupState extends State<Signup> {
         );
       }
     } on AuthException catch (e) {
-      // Supabase auth-specific errors
       String message = e.message;
       if (message.contains('already registered')) {
         message = "Email already in use. Please sign in.";
@@ -85,7 +84,6 @@ class _SignupState extends State<Signup> {
       }
       _showSnackBar(message, isError: true);
     } on PostgrestException catch (e) {
-      // Database insert errors
       _showSnackBar("Failed to save profile: ${e.message}", isError: true);
     } catch (e) {
       _showSnackBar("Something went wrong. Please try again.", isError: true);
@@ -132,7 +130,6 @@ class _SignupState extends State<Signup> {
               focusedBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.green, width: 2),
               ),
-              // Show toggle only on password field
               suffixIcon: isPassword
                   ? IconButton(
                       icon: Icon(
@@ -176,7 +173,6 @@ class _SignupState extends State<Signup> {
                     ),
                   ),
                 ),
-
                 const Text(
                   "Create Your Account",
                   style: TextStyle(
@@ -214,10 +210,7 @@ class _SignupState extends State<Signup> {
                   _accessKeyController,
                   isPassword: true,
                 ),
-
                 const SizedBox(height: 30),
-
-                // Create Account button
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: Container(

@@ -68,7 +68,6 @@ class _SigninState extends State<Signin> {
     }
   }
 
-  // ─── Google Sign In ───────────────────────────────────────
   // Future<void> _signInWithGoogle() async {
   //   setState(() => _isGoogleLoading = true);
 
@@ -300,7 +299,7 @@ class _SigninState extends State<Signin> {
                   //     children: const [
                   //       Expanded(child: Divider(color: Colors.grey)),
                   //       Padding(
-                  
+
                   //         padding: EdgeInsets.symmetric(horizontal: 12),
                   //         child: Text(
                   //           "OR",
@@ -382,7 +381,7 @@ class _SigninState extends State<Signin> {
                   //     ),
                   //   ),
                   // ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                 ],
               ),
             ],
