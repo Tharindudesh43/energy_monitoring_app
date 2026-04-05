@@ -1,6 +1,3 @@
-import 'package:energy_monitoring_app/user-pages/calculation_page.dart';
-import 'package:energy_monitoring_app/user-pages/dashboard_page.dart';
-import 'package:energy_monitoring_app/user-pages/recommend_page.dart';
 import 'package:energy_monitoring_app/user-pages/user_settings.dart';
 import 'package:flutter/material.dart';
 
